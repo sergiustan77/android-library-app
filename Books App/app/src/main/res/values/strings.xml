@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Books</string>
+    <string name="dropdown">Title, Author or Category</string>
+</resources>
