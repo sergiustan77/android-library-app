@@ -5,9 +5,9 @@ import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 
+
 import com.example.books.model.Book;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Dao
@@ -24,4 +24,5 @@ public interface BookDao {
 
     @Delete
     void delete(Book book);
+
 }

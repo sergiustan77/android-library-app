@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/favorite"
+        android:icon="@drawable/ic_baseline_dashboard_24"
+        app:iconTint="#FFFFFF"
+        android:title="Favorites"
+        app:iconSize="32dp"
+        android:contentDescription="Go To Favorites"
+        app:showAsAction="ifRoom" />
+
+
+
+
+
+</menu>

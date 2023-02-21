@@ -2,11 +2,11 @@ package com.example.books.services;
 
 import android.content.Context;
 
+
 import com.example.books.dao.BookDao;
 import com.example.books.database.Database;
 import com.example.books.model.Book;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class DataBaseService {
@@ -21,9 +21,13 @@ public class DataBaseService {
         bookDao = database.bookDao();
     }
 
-    public void saveToBooksLibraryDatabase(Book book) {
+    public boolean saveToBooksLibraryDatabase(Book book) {
         if(bookDao.findBookByVolumeID(book.getVolumeID()) == null){
-        bookDao.insertBook(book);}
+        bookDao.insertBook(book);
+        return true;} else {
+
+            return false;
+        }
     }
 
     public List<Book> getAllFavoriteBooks() {

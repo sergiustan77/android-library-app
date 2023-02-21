@@ -10,7 +10,7 @@ import java.util.ArrayList;
 @Entity
 public class Book implements Serializable {
 
-    public Book(String volumeID, String title, String authors, String publisher, String publishedDate, String description, String pageCount, String categories, String imageSmallThumbnail, String imageSmallBookPage, String language, String previewLink, String buyLink) {
+    public Book(String volumeID, String title, String authors, String publisher, String publishedDate, String description, String pageCount, String categories, String imageSmallThumbnail, String imageSmallBookPage, String language, String previewLink, String buyLink, String averageRating) {
         this.volumeID = volumeID;
         this.title = title;
         this.authors = authors;
@@ -24,6 +24,7 @@ public class Book implements Serializable {
         this.language = language;
         this.previewLink = previewLink;
         this.buyLink = buyLink;
+        this.averageRating = averageRating;
     }
 
     public Book() {
@@ -70,6 +71,17 @@ public class Book implements Serializable {
 
     @ColumnInfo(name = "buy_link")
     private String buyLink;
+
+    @ColumnInfo(name = "average_rating")
+    private String averageRating;
+
+    public String getAverageRating() {
+        return averageRating;
+    }
+
+    public void setAverageRating(String averageRating) {
+        this.averageRating = averageRating;
+    }
 
     public int getId() {
         return id;
